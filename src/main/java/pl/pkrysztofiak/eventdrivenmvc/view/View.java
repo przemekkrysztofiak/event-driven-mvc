@@ -1,16 +1,18 @@
 package pl.pkrysztofiak.eventdrivenmvc.view;
 
-import pl.pkrysztofiak.eventdrivenmvc.events.EventStream;
+import java.awt.geom.Point2D.Double;
+
 import pl.pkrysztofiak.eventdrivenmvc.events.ViewEvents;
 
 public class View extends AbstractView implements ViewEvents {
 
-    public static void main(String[] args) {
+    public View() {
+        initEvents();
+    }
+
+    @Override
+    public void onShow(Double coordinates) {
 
     }
 
-    void dosth() {
-        EventStream<Void> show = new EventStream<>();
-        show.forEach(this).publish(null);
-    }
 }
